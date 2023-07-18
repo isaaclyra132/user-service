@@ -3,8 +3,8 @@ spring:
     name: user-service
   datasource:
     username: postgres
-    password: broxura123
-    url: jdbc:postgresql://localhost:16543/broxura-db
+    password: isaac132
+    url: jdbc:postgresql://34.72.121.124:5432/user-db
   jpa:
     properties:
       hibernate:

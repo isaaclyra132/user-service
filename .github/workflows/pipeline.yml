@@ -24,6 +24,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
   build-push-gcr:
+    needs: Build
     name: Build and Push to GCP
     runs-on: ubuntu-latest
     env:
@@ -41,7 +42,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-              
+
       - uses: google-github-actions/setup-gcloud@v1
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
