@@ -15,7 +15,7 @@ spring:
 
     # Hibernate ddl auto (create, create-drop, validate, update)
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: false
   rabbitmq:
     host: 34.151.222.162

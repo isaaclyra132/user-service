@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: user-api
-          image: gcr.io/payment-service-393116/payment-service
+          image: gcr.io/user-service-312093/user-service
           imagePullPolicy: Always
           ports:
             - containerPort: 8020
