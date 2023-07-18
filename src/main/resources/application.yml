@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    username: postgres
+    password: broxura123
+    url: jdbc:postgresql://localhost:16543/broxura-db
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        format_sql: true
+
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  rabbitmq:
+    host: 34.151.222.162
+    port: 5672
+    username: tre
+    password: 123456
+    queue: "NEW_USER_REGISTERED"
+server:
+  port: 8020

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: user-api
+  template:
+    metadata:
+      name: user-api
+      labels:
+        app: user-api
+    spec:
+      containers:
+        - name: user-api
+          image: gcr.io/payment-service-393116/payment-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8020
